@@ -1,4 +1,5 @@
 <resources>
     <color name="text">#FFFFFF</color>
     <color name="background">#16202A</color>
+    <color name="navigationBarBackground">#131D27</color>
 </resources>
