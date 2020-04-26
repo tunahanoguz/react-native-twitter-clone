@@ -1,1 +1,1 @@
-export { Box } from './shared';
+export { Box, Text, Image } from './shared';
