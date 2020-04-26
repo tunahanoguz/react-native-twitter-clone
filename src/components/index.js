@@ -1,1 +1,2 @@
-export { Box, Text, Image } from './shared';
+export { Box, Text, Image, Icon } from './shared';
+export Tweet from './Tweet';
