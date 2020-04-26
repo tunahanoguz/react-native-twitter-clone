@@ -16,6 +16,7 @@ function HomeNavigation() {
           elevation: 0,
         },
         headerTitleStyle: { color: theme.colors.white },
+        cardStyle: { backgroundColor: theme.colors.navyBlue },
       }}>
       <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
