@@ -1,13 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {
-  compose,
-  flexbox,
-  typography,
-  space,
-  color,
-} from 'styled-system';
-import theme from '../../theme';
+import { compose, flexbox, typography, space, color } from 'styled-system';
+import theme from 'theme';
 
 function Text({ uppercase, children, ...props }) {
   return (
@@ -20,14 +14,7 @@ function Text({ uppercase, children, ...props }) {
   );
 }
 
-const StyledText = styled.Text(
-  compose(
-    flexbox,
-    typography,
-    space,
-    color,
-  ),
-);
+const StyledText = styled.Text(compose(flexbox, typography, space, color));
 
 StyledText.defaultProps = {
   variant: 'normal',
