@@ -18,6 +18,7 @@ const StyledText = styled.Text(compose(flexbox, typography, space, color));
 
 StyledText.defaultProps = {
   variant: 'normal',
+  fontSize: 15,
 };
 
 export default Text;
