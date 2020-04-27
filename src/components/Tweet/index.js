@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
-import { Box, Text, Image, Icon } from 'components';
+import { Box, Text, Image, Icon, Modal } from 'components';
 
 function Tweet({ user, tweet }) {
+  const navigation = useNavigation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { fullName, username, profilePicture } = user;
   const { text, images } = tweet;
 
@@ -34,7 +38,10 @@ function Tweet({ user, tweet }) {
             </Text>
           </Box>
 
-          <Icon name="chevron-down" color="light" size={16} />
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Modal', { user, tweet })}>
+            <Icon name="chevron-down" color="light" size={16} />
+          </TouchableOpacity>
         </Box>
 
         <Box mb={5}>
