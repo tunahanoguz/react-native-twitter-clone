@@ -7,14 +7,16 @@ const colors = {
   barNavyBlue: '#131D27',
   searchBoxNavyBlue: '#10171F',
   divSBBorderGrey: '#39434D',
+  bottomTabBorderGrey: '#37444D',
   horizontalLineGrey: '#405362',
   messageVBGrey: '#3D5466',
   switchLightGrey: '#B9B9B9',
   switchDarkGrey: '#5C636B',
   pink: '#D6295E',
+  modalOpacity: 'rgba(0, 0, 0, 0.8)',
 };
 
-const spaces = [
+const space = [
   4,
   6,
   8,
@@ -40,5 +42,5 @@ const spaces = [
 
 export default {
   colors,
-  spaces,
+  space,
 };
