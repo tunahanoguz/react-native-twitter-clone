@@ -9,7 +9,12 @@ function Home() {
       _id: 'asdasdasd',
       text:
         'In hospitals across the Gulf foreigners are on the front the fighting covid-19. Nevertheless, the pandemic has revealed more bigotry than benevolence',
-      images: [],
+      images: [
+        require('../../assets/images/image1.jpg'),
+        // require('../../assets/images/image2.jpg'),
+        // require('../../assets/images/image3.jpg'),
+        // require('../../assets/images/image4.jpg'),
+      ],
     },
     {
       _id: 'asd',
