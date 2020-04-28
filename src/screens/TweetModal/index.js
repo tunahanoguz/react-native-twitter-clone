@@ -18,7 +18,7 @@ function TweetModal({ route }) {
           alignSelf="center"
           width={36}
           height={6}
-          mt={0}
+          mt={1}
           bg="messageVBGrey"
           borderRadius={100}
         />
