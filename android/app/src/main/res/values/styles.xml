@@ -2,6 +2,15 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/navigationBarBackground</item>
         <item name="android:navigationBarColor">@color/navigationBarBackground</item>
+        <item name="android:scrollbarThumbVertical">@color/blue</item>
+    </style>
+
+    <style name="SplashScreen" parent="SplashScreen_SplashTheme">
+        <item name="android:windowBackground">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:navigationBarColor">@color/blue</item>
     </style>
 </resources>
