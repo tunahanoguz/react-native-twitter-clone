@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Feather';
 import HomeNavigation from '../HomeNavigation';
+import SearchNavigation from '../SearchNavigation';
 import theme from '../../theme';
 
 function TabNavigation() {
@@ -28,6 +29,26 @@ function TabNavigation() {
           tabBarIcon: ({ color, size }) => (
             <Icon name="home" color={color} size={size} />
           ),
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={SearchNavigation}
+        options={({ route }) => {
+          let routeIndex;
+          let isBarVisible;
+
+          if (route.state) {
+            routeIndex = route.state.index;
+            isBarVisible = route.state.routeNames[routeIndex] !== 'TopTrends';
+          }
+
+          return {
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="search" color={color} size={size} />
+            ),
+            tabBarVisible: isBarVisible,
+          };
         }}
       />
     </Tab.Navigator>
