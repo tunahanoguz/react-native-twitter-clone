@@ -4,7 +4,7 @@
         <item name="android:windowBackground">@color/background</item>
         <item name="android:statusBarColor">@color/navigationBarBackground</item>
         <item name="android:navigationBarColor">@color/navigationBarBackground</item>
-        <item name="android:scrollbarThumbVertical">@color/blue</item>
+        <item name="android:scrollbarThumbVertical">@color/darkBlue</item>
     </style>
 
     <style name="SplashScreen" parent="SplashScreen_SplashTheme">

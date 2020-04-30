@@ -3,4 +3,5 @@
     <color name="background">#16202A</color>
     <color name="navigationBarBackground">#131D27</color>
     <color name="blue">#1DA1F3</color>
+    <color name="darkBlue">#196392</color>
 </resources>
