@@ -4,8 +4,11 @@ const colors = {
   blue: '#1DA1F3',
   darkBlue: '#1A6DA3',
   navyBlue: '#16202A',
+  darkNavyBlue: '#10171F',
   barNavyBlue: '#131D27',
   searchBoxNavyBlue: '#10171F',
+  switchDarkBlue: '#164767',
+  switchLightBlue: '#1C9EEC',
   divSBBorderGrey: '#39434D',
   bottomTabBorderGrey: '#37444D',
   horizontalLineGrey: '#405362',
@@ -14,6 +17,7 @@ const colors = {
   switchDarkGrey: '#5C636B',
   pink: '#D6295E',
   modalOpacity: 'rgba(0, 0, 0, 0.8)',
+  disabledButtonGrey: '#A1A6AA',
 };
 
 const space = [
