@@ -1,18 +1,8 @@
 import React from 'react';
-import { Animated, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styled from 'styled-components';
-import {
-  compose,
-  flexbox,
-  position,
-  layout,
-  space,
-  color,
-  border,
-} from 'styled-system';
-import { Box, Text, Icon } from 'components';
-import theme from 'theme';
+import PropTypes from 'prop-types';
+import { Box } from 'components';
 
 function Modal({ isOpen, setIsOpen, children, ...props }) {
   const navigation = useNavigation();
@@ -24,21 +14,16 @@ function Modal({ isOpen, setIsOpen, children, ...props }) {
       justifyContent="center"
       alignItems="center"
       mb={-1}
-      onPress={() => navigation.pop()}>
+      onPress={() => navigation.pop()}
+      {...props}>
       {children}
     </Box>
   );
 }
 
-const StyledModal = styled(Animated.View)(
-  compose(flexbox, position, layout, space, color, border),
-);
-
-Modal.defaultProps = {
-  width: '100%',
-  bg: theme.colors.navyBlue,
-  borderTopStartRadius: 15,
-  borderTopEndRadius: 15,
+Modal.propTypes = {
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
 };
 
 export default Modal;
