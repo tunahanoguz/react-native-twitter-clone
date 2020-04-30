@@ -1,12 +1,14 @@
 import * as React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import FeatherIcon from 'react-native-vector-icons/Feather';
-import { Modal, Image } from 'components';
+import { Button, Image } from 'components';
 import { Home } from '../../screens';
 import theme from 'theme';
 
 function HomeNavigation() {
+  const navigation = useNavigation();
   const Stack = createStackNavigator();
 
   return (
@@ -33,7 +35,10 @@ function HomeNavigation() {
           />
         ),
         headerRight: () => (
-          <FeatherIcon name="zap" color={theme.colors.blue} size={20} />
+          <Button
+            onPress={() => navigation.navigate('TweetDisplaySettingsModal')}>
+            <FeatherIcon name="zap" color={theme.colors.blue} size={20} />
+          </Button>
         ),
       }}>
       <Stack.Screen
