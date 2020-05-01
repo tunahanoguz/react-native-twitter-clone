@@ -117,6 +117,8 @@ export const trends = [
   { title: 'AliyiÖldürenlerNerede', tweetCount: 41700 },
 ];
 
+export const trendMenuItems = ['Top', 'Latest', 'People', 'Photos', 'Videos'];
+
 export const countries = [
   'Afghanistan',
   'Albania',
