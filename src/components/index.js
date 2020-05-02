@@ -14,3 +14,5 @@ export Tweet from './Tweet';
 export Trend from './Trend';
 export NewTweetButton from './NewTweetButton';
 export SearchFilterItem from './SearchFilterItem';
+export ConversationItem from './ConversationItem';
+export SettingsItem from './SettingsItem';
