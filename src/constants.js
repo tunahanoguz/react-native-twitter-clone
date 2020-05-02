@@ -119,6 +119,69 @@ export const trends = [
 
 export const trendMenuItems = ['Top', 'Latest', 'People', 'Photos', 'Videos'];
 
+export const messages = [
+  {
+    id: 'conversation1',
+    user: users[0],
+    messages: [
+      {
+        id: 'message1',
+        body:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        date: new Date(),
+      },
+      {
+        id: 'message2',
+        body:
+          'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        date: new Date(),
+      },
+      {
+        id: 'message3',
+        body:
+          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        date: new Date(),
+      },
+      {
+        id: 'message4',
+        body:
+          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        date: new Date(),
+      },
+    ],
+  },
+  {
+    id: 'conversation2',
+    user: users[1],
+    messages: [
+      {
+        id: 'message1',
+        body:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        date: new Date(),
+      },
+      {
+        id: 'message2',
+        body:
+          'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        date: new Date(),
+      },
+      {
+        id: 'message3',
+        body:
+          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        date: new Date(),
+      },
+      {
+        id: 'message4',
+        body:
+          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        date: new Date(),
+      },
+    ],
+  },
+];
+
 export const countries = [
   'Afghanistan',
   'Albania',
