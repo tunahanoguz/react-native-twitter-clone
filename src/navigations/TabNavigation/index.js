@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Feather';
 import HomeNavigation from '../HomeNavigation';
 import SearchNavigation from '../SearchNavigation';
+import NotificationNavigation from '../NotificationNavigation';
 import theme from '../../theme';
 
 function TabNavigation() {
@@ -46,6 +47,26 @@ function TabNavigation() {
           return {
             tabBarIcon: ({ color, size }) => (
               <Icon name="search" color={color} size={size} />
+            ),
+            tabBarVisible: isBarVisible,
+          };
+        }}
+      />
+      <Tab.Screen
+        name="Notification"
+        component={NotificationNavigation}
+        options={({ route }) => {
+          let routeIndex;
+          let isBarVisible;
+
+          if (route.state) {
+            routeIndex = route.state.index;
+            isBarVisible = route.state.routeNames[routeIndex] !== 'TopTrends';
+          }
+
+          return {
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="bell" color={color} size={size} />
             ),
             tabBarVisible: isBarVisible,
           };

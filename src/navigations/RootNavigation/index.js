@@ -5,6 +5,8 @@ import {
   TweetModal,
   TrendModal,
   TweetDisplaySettingsModal,
+  TrendInnerPrefModal,
+  TrendInnerSetModal,
 } from 'screens';
 import TabNavigation from '../TabNavigation';
 import SearchNavigation from '../SearchNavigation';
@@ -57,6 +59,23 @@ function RootNavigation() {
         options={{
           animationEnabled: true,
           cardStyle: { backgroundColor: 'rgba(0, 0, 0, 0.8)' },
+          cardOverlayEnabled: true,
+        }}
+      />
+      <Stack.Screen
+        name="TrendInnerPrefModal"
+        component={TrendInnerPrefModal}
+        options={{
+          animationEnabled: true,
+          cardStyle: { backgroundColor: 'rgba(0, 0, 0, 0.8)' },
+          cardOverlayEnabled: true,
+        }}
+      />
+      <Stack.Screen
+        name="TrendInnerSetModal"
+        component={TrendInnerSetModal}
+        options={{
+          cardStyle: { backgroundColor: 'transparent' },
           cardOverlayEnabled: true,
         }}
       />
