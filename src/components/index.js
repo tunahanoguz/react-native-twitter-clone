@@ -12,3 +12,4 @@ export {
 export Tweet from './Tweet';
 export Trend from './Trend';
 export NewTweetButton from './NewTweetButton';
+export SearchFilterItem from './SearchFilterItem';
