@@ -18,6 +18,7 @@ const colors = {
   pink: '#D6295E',
   modalOpacity: 'rgba(0, 0, 0, 0.8)',
   disabledButtonGrey: '#A1A6AA',
+  green: '#16BF62',
 };
 
 const space = [
