@@ -7,3 +7,8 @@ export TrendModal from './TrendModal';
 export ExploreLocations from './ExploreLocations';
 export TweetDisplaySettingsModal from './TweetDisplaySettingsModal';
 export NewTweet from './NewTweet';
+export TrendInner from './TrendInner';
+export TrendInnerPrefModal from './TrendInnerPrefModal';
+export TrendInnerSetModal from './TrendInnerSetModal';
+export Notifications from './Notifications';
+export NotificationSettings from './NotificationSettings';
