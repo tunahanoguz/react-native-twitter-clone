@@ -12,3 +12,5 @@ export TrendInnerPrefModal from './TrendInnerPrefModal';
 export TrendInnerSetModal from './TrendInnerSetModal';
 export Notifications from './Notifications';
 export NotificationSettings from './NotificationSettings';
+export Messages from './Messages';
+export MessagesSettings from './MessagesSettings';
