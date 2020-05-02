@@ -8,6 +8,7 @@ export {
   Input,
   SearchInput,
   Switch,
+  SquareCheckBox,
 } from './shared';
 export Tweet from './Tweet';
 export Trend from './Trend';

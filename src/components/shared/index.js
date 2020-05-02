@@ -6,4 +6,5 @@ export Icon from './Icon';
 export Modal from './Modal';
 export SearchInput from './SearchInput';
 export Switch from './Switch';
+export SquareCheckBox from './SquareCheckBox';
 export Input from './Input';
