@@ -1,4 +1,5 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
 import Box from '../shared/Box';
@@ -6,11 +7,17 @@ import Icon from '../shared/Icon';
 import Text from '../shared/Typography';
 import Button from '../shared/Button';
 
-function Trend({ title, tweetCount }) {
+function Trend({ title, tweetCount, onPress }) {
   const navigation = useNavigation();
 
   return (
-    <Box flexDirection="row" justifyContent="space-between" px={4} py={9}>
+    <Box
+      as={TouchableOpacity}
+      flexDirection="row"
+      justifyContent="space-between"
+      px={4}
+      py={9}
+      onPress={() => navigation.navigate('TrendInner', { title })}>
       <Box>
         <Text fontSize={15} fontWeight={700}>
           {title}
@@ -30,6 +37,11 @@ function Trend({ title, tweetCount }) {
 Trend.propTypes = {
   title: PropTypes.string.isRequired,
   tweetCount: PropTypes.number.isRequired,
+  onPress: PropTypes.func,
+};
+
+Trend.defaultProps = {
+  onPress: () => {},
 };
 
 export default Trend;
