@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, FlatList } from 'react-native';
-import { Box, Text, Switch, Button } from 'components';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Box, Text, SquareCheckBox, Button } from 'components';
 
 function NotificationSettings({ navigation }) {
-  const [isLocationActive, setIsLocationActive] = useState(true);
-  const [isPersonalizationActive, setIsPersonalizationActive] = useState(true);
+  const [isQFActive, setIsQFActive] = useState(true);
+  const [isUNActive, setIsUNActive] = useState(true);
 
   const filters = [
     {
@@ -65,9 +65,18 @@ function NotificationSettings({ navigation }) {
               activeOpacity={1}
               borderBottomWidth={0.4}
               borderBottomColor="divSBBorderGrey"
-              onPress={() => setIsLocationActive((value) => !value)}>
+              onPress={() => setIsQFActive((value) => !value)}>
               <Box>
-                <Text fontSize={16}>{item.title}</Text>
+                <Box flexDirection="row" justifyContent="space-between">
+                  <Text fontSize={16}>{item.title}</Text>
+                  {item.title === 'Quality Filter' && (
+                    <SquareCheckBox
+                      isActive={isQFActive}
+                      setIsActive={setIsQFActive}
+                    />
+                  )}
+                </Box>
+
                 {item.description && (
                   <Text fontSize={14} color="light" lineHeight="20px">
                     {item.description}
@@ -102,9 +111,17 @@ function NotificationSettings({ navigation }) {
               activeOpacity={1}
               borderBottomWidth={0.4}
               borderBottomColor="divSBBorderGrey"
-              onPress={() => setIsPersonalizationActive((value) => !value)}>
+              onPress={() => setIsUNActive((value) => !value)}>
               <Box>
-                <Text fontSize={16}>{item.title}</Text>
+                <Box flexDirection="row" justifyContent="space-between">
+                  <Text fontSize={16}>{item.title}</Text>
+                  {item.title === 'Unread notification count badge' && (
+                    <SquareCheckBox
+                      isActive={isUNActive}
+                      setIsActive={setIsUNActive}
+                    />
+                  )}
+                </Box>
                 {item.description && (
                   <Text fontSize={14} color="light" lineHeight="20px">
                     {item.description}
