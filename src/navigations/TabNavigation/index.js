@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Feather';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import HomeNavigation from '../HomeNavigation';
 import SearchNavigation from '../SearchNavigation';
 import NotificationNavigation from '../NotificationNavigation';
+import MessageNavigation from '../MessageNavigation';
 import theme from '../../theme';
 
 function TabNavigation() {
@@ -67,6 +69,26 @@ function TabNavigation() {
           return {
             tabBarIcon: ({ color, size }) => (
               <Icon name="bell" color={color} size={size} />
+            ),
+            tabBarVisible: isBarVisible,
+          };
+        }}
+      />
+      <Tab.Screen
+        name="Message"
+        component={MessageNavigation}
+        options={({ route }) => {
+          let routeIndex;
+          let isBarVisible;
+
+          if (route.state) {
+            routeIndex = route.state.index;
+            isBarVisible = route.state.routeNames[routeIndex] !== 'TopTrends';
+          }
+
+          return {
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesomeIcon name="envelope-o" color={color} size={size} />
             ),
             tabBarVisible: isBarVisible,
           };
